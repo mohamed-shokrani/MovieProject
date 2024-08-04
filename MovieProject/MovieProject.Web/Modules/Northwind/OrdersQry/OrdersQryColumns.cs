@@ -1,0 +1,33 @@
+﻿using Serenity.ComponentModel;
+using System;
+using System.ComponentModel;
+
+namespace MovieProject.Northwind.Columns;
+
+[ColumnsScript("Northwind.OrdersQry")]
+[BasedOnRow(typeof(OrdersQryRow), CheckNames = true)]
+public class OrdersQryColumns
+{
+    [EditLink, DisplayName("Db.Shared.RecordId"), AlignRight]
+    public int OrderId { get; set; }
+    [EditLink]
+    public string CustomerId { get; set; }
+    public int EmployeeId { get; set; }
+    public DateTime OrderDate { get; set; }
+    public DateTime RequiredDate { get; set; }
+    public DateTime ShippedDate { get; set; }
+    public int ShipVia { get; set; }
+    public decimal Freight { get; set; }
+    public string ShipName { get; set; }
+    public string ShipAddress { get; set; }
+    public string ShipCity { get; set; }
+    public string ShipRegion { get; set; }
+    public string ShipPostalCode { get; set; }
+    public string ShipCountry { get; set; }
+    public string CompanyName { get; set; }
+    public string Address { get; set; }
+    public string City { get; set; }
+    public string Region { get; set; }
+    public string PostalCode { get; set; }
+    public string Country { get; set; }
+}
